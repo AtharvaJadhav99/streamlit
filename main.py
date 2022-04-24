@@ -4,9 +4,9 @@ import pandas as pd
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_absolute_error,mean_squared_error,r2_score
 
-header = st.beta_container()
-dataset = st.beta_container()
-model_training = st.beta_container()
+header = st.container()
+dataset = st.container()
+model_training = st.container()
 
 with header:
     st.title("Welcome to my Data Science Project")
@@ -27,7 +27,8 @@ with model_training:
 
 	st.header("Time to train the model")
 
-	sel_col,disp_col=st.beta_columns(2)
+	sel_col,disp_col=st.
+	columns(2)
 	max_depth=sel_col.slider('What should be max_depth of model?' ,min_value=10,max_value=100,value=20,step=10)
 
 	n_estimators=sel_col.selectbox('How many trees should be there?',options=[100,200,300,400],index=0)
